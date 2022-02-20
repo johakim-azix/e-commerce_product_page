@@ -20,3 +20,264 @@
     --regular-font-weight: 400;
     --bold-font-weight: 700;
 }
+
+body {
+    overflow-y: hidden;
+}
+
+.image-shower{
+    position: absolute;
+    background-color: rgba(0,0,0,.75);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    animation: image-shower-fade-in 1s forwards 2s, image-shower-fade-out 1s forwards 5s;
+}
+
+@keyframes image-shower-fade-in {
+    from{
+        opacity: 0;
+        z-index: -1;
+    }
+
+    to{
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+@keyframes image-shower-fade-out {
+    from{
+        opacity: 1;
+        z-index: 1;
+    }
+    to{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.container{
+    /*border: solid white 1px; */
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.container > div{
+    width: fit-content;
+    height: fit-content
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0
+}
+
+.head button{
+    outline: 0;
+    border: 0;
+    color: var(--white);
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.main-image-container > button:hover,
+.head button:hover{
+    color: var(--orange);
+}
+
+.main-image-container{
+    display: flex;
+    position: relative
+}
+
+.main-image-container > button{
+    /*border: solid red 1px;*/
+    outline: 0;
+    border: 0;
+    background-color: var(--white);
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    position: absolute;
+    top: 230px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+.main-image-container > button:first-child{
+    left: -20px
+}
+
+.main-image-container > button:last-child{
+    right: -20px;
+}
+
+
+
+
+
+.tooltip-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    opacity: .75;
+    z-index: -2;
+    /*animation: back-drop-fade-out .15s forwards;*/
+}
+
+.side-navigation {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    background-color: var(--white);
+    top: 0;
+    left: -300px;
+    z-index: -2;
+    /*animation: side-nav-slide-out .15s forwards ;*/
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.side-navigation div{
+    border-bottom: solid rgba(0,0,0,.1) 1px;
+    padding: 10px 20px;
+
+}
+
+.side-navigation div button {
+    color: var(--black);
+    opacity: .75;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    /*margin-right: 10px;*/
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+    padding: 5px 10px;
+}
+
+.side-navigation ul{
+    list-style: none;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.side-navigation li{
+    line-height: 40px;
+    transition: all ease-in-out .15s;
+}
+
+.side-navigation div button:hover,
+.side-navigation li:hover{
+    background-color: rgba(0,0,0,.05);
+}
+
+.side-navigation li a{
+    display: block;
+    height: 100%;
+    padding: 0 50px;
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+.main-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+}
+
+.hide{
+    display: none;
+}
+
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+/*================= start side navigation and back drop ========================*/
+
+@keyframes side-nav-slide-in {
+    from{
+        left: -300px;
+        z-index: -1;
+    }
+    to{
+        left: 0;
+        z-index: 0;
+    }
+}
+@keyframes side-nav-slide-out {
+    from{
+        left: 0;
+        z-index: 0;
+    }
+
+    to{
+        left: -300px;
+        z-index: -1;
+    }
+}
+
+@keyframes back-drop-fade-in {
+    from{
+        opacity: 0;
+        z-index: -2;
+    }
+
+    to{
+        opacity: .75;
+        z-index: 0;
+    }
+}
+
+@keyframes back-drop-fade-out {
+
+    from{
+        opacity: .75;
+        z-index: 0;
+    }
+
+    to{
+        opacity: 0;
+        z-index: -2;
+    }
+}
+/*================= end side navigation and back drop ========================*/
