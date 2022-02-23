@@ -1,6 +1,5 @@
-/*todo : import the font here */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 :root {
     /*  ========== primary colors ==============  */
     --orange: hsl(26, 100%, 55%);
@@ -23,7 +22,8 @@
 
 body {
     overflow-y: hidden;
-    background-color: red!important;
+    font-family: var(--font-familly);
+    /*background-color: red!important;*/
 }
 
 .image-shower{
