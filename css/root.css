@@ -150,7 +150,8 @@ body {
     background-color: var(--white);
     top: 0;
     left: -300px;
-    z-index: -2;
+    transition: all ease-in-out .15s;
+    z-index: 1;
     /*animation: side-nav-slide-out .15s forwards ;*/
     font-size: var(--font-size);
     font-weight: bold;
@@ -236,27 +237,27 @@ body {
 
 /*================= start side navigation and back drop ========================*/
 
-@keyframes side-nav-slide-in {
-    from{
-        left: -300px;
-        z-index: -1;
-    }
-    to{
-        left: 0;
-        z-index: 0;
-    }
-}
-@keyframes side-nav-slide-out {
-    from{
-        left: 0;
-        z-index: 0;
-    }
+/*@keyframes side-nav-slide-in {*/
+/*    from{*/
+/*        left: -300px;*/
+/*        !*z-index: -1;*!*/
+/*    }*/
+/*    to{*/
+/*        left: 0;*/
+/*        !*z-index: 0;*!*/
+/*    }*/
+/*}*/
+/*@keyframes side-nav-slide-out {*/
+/*    from{*/
+/*        left: 0;*/
+/*        !*z-index: 0;*!*/
+/*    }*/
 
-    to{
-        left: -300px;
-        z-index: -1;
-    }
-}
+/*    to{*/
+/*        left: -300px;*/
+/*        !*z-index: 0;*!*/
+/*    }*/
+/*}*/
 
 @keyframes back-drop-fade-in {
     from{

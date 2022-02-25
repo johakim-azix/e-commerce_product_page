@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/image-displayer.css">
     <script defer src="js/index.js"></script>
+    <script defer src="js/cartQueue.js"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
     <div class="header-container">
         <div class="header">
             <div class="logo">
-                <button><i class="fas fa-hamburger"></i></button>
+                <button onclick="showSideNavigation(this)"><i class="fas fa-bars"></i></button>
                 <span>sneakers</span>
             </div>
             <div class="navigation">
@@ -29,18 +30,21 @@
                 <a href="" class="link">About</a>
                 <a href="" class="link">Contact</a>
             </div>
-            <div class="tru" style="display:flex; /*border: solid red 1px;*/ align-self: flex-end">
+            <div class="tru" style="display:flex;/* border: solid red 1px;*/ align-self: flex-end">
                 <div class="cart">
-                    <span style="/*border: solid red 1px;*/ "></span>
-                    <button>
+                    <span></span>
+                    <button onclick="showCart(this)">
                         <i class="fa fa-shopping-cart"></i>
                         <span class="cart-item-counter">3</span>
                     </button>
                     <div class="cart-content">
-                        <div class="title">Cart</div>
+                        <div class="title">
+                            <span>Cart</span>
+                            <button onclick="hideCart(this)"><i class="fa fa-times"></i></button>
+                        </div>
                         <div class="body">
                             <div class="item-queue">
-                                <div class="item">
+                                <div id="view-template" class="item">
                                     <div class="image">
                                         <img src="images/image-product-1-thumbnail.jpg" alt="">
                                     </div>
@@ -51,7 +55,7 @@
                                     <button><i class="fa fa-trash-alt"></i></button>
                                 </div>
                             </div>
-                            <button>Checkout</button>
+                            <button id="btn-checkout">Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -113,17 +117,17 @@
             </div>
             <div class="controls">
                 <div class="counter">
-                    <button><i class="fa fa-plus"></i></button>
+                    <button onclick="increaseItems(this)"><i class="fa fa-plus"></i></button>
                     <span class="count">0</span>
-                    <button><i class="fa fa-minus"></i></button>
+                    <button disabled onclick="decreaseItems(this)"><i class="fa fa-minus"></i></button>
                 </div>
-                <button><i class="fa fa-shopping-cart" style="margin-right: 10px"></i> Add to cart</button>
+                <button disabled onclick="addToCart(this)" ><i class="fa fa-shopping-cart" style="margin-right: 10px"></i> Add to cart</button>
             </div>
         </div>
     </div>
 </div>
 
-<div class="tooltip-backdrop"></div> <!--back-drop-fade-in-->
+<div onclick="hideSideNavigation(this)" class="tooltip-backdrop "></div> <!--back-drop-fade-in-->
 
 <!--<div class="image-shower">-->
 <!--    <div class="container">-->
@@ -161,9 +165,9 @@
 <!--    </div>-->
 <!--</div>-->
 
-<div class="side-navigation">  <!--nav-slide-in-->
+<div class="side-navigation">
     <div>
-        <button><i class="fa fa-times"></i></button>
+        <button onclick="hideSideNavigation(this)"><i class="fa fa-times"></i></button>
         <span>Menu</span>
     </div>
     <ul>
