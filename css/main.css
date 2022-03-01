@@ -33,6 +33,7 @@
     height: 100%;
     width: 100%!important;
     position: absolute;
+    opacity: 1;
 }
 
 .image-scene .image-item img{
@@ -56,6 +57,7 @@
     align-items: center;
     align-content: center;
     position: relative;
+    background-color: rgba(0,0,0,.2);
 }
 
 .thumb .cover{

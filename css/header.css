@@ -75,14 +75,13 @@
 
 .navigation .link {
     text-decoration: none;
-    /*background-color: blue;*/
     height: calc(100% - 12px);
     display: inline-block;
-    /*margin: 0 5px;*/
     padding: 9px 15px 0 15px;
     border-bottom: solid transparent 4px;
     color: var(--dark-grayish-blue);
     transition: all ease-in-out .3s;
+    outline: 0;
 }
 
 .navigation .link:hover {

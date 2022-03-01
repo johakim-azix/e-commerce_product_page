@@ -16,7 +16,38 @@ document.addEventListener("DOMContentLoaded", () => {
     cart = document.getElementsByClassName("cart-content")[0]
 })
 
+/*============= start image panel area ===============*/
+function showImage(thumb){
+    let mainImageItem1 = document.getElementsByClassName("image-scene")[0].getElementsByClassName("image-item")[0]
+    let mainImage1 = document.getElementsByClassName("image-scene")[0].getElementsByClassName("image-item")[0].getElementsByTagName("img")[0]
+    let mainImageItem2 = document.getElementsByClassName("image-scene")[0].getElementsByClassName("image-item")[1]
+    let mainImage2 = document.getElementsByClassName("image-scene")[0].getElementsByClassName("image-item")[1].getElementsByTagName("img")[0]
+    let thumbs = (thumb.parentElement).getElementsByClassName("thumb")
+    let thumbLink = thumb.getElementsByTagName("img")[0].getAttribute("src").toString()
+    for (let i = 0; i < thumbs.length; i++) {
+        thumbs[i].getElementsByClassName("cover")[0].classList.remove("active")
+    }
+    thumb.getElementsByClassName("cover")[0].classList.add("active")
 
+    mainImage1.setAttribute("src", thumbLink.replace("-thumbnail", ""))
+    setTimeout(()=>{
+        if (mainImageItem2.classList.contains("main-image-item-fade-in")){
+            mainImageItem2.classList.replace("main-image-item-fade-in", "main-image-item-fade-out")
+        }else {
+            mainImageItem2.classList.add("main-image-item-fade-out")
+        }
+    },300)
+
+    setTimeout(()=>{
+        mainImage2.setAttribute("src", thumbLink.replace("-thumbnail", ""))
+        mainImageItem2.classList.replace("main-image-item-fade-out", "main-image-item-fade-in")
+    },700)
+ }
+/*============= end image panel area ===============*/
+
+
+
+/*=============== start cart area ====================*/
 function addToCart(button) {
     let cartCounterBadge = document.getElementsByClassName("cart-item-counter")[0]
     let cartItem = buildCartItem()
@@ -93,6 +124,10 @@ function showCart(button) {
 function hideCart(button) {
     cart.classList.replace("cart-fade-in", "cart-fade-out")
 }
+
+/*================= end cart area ================*/
+
+
 
 function showSideNavigation(button) {
     if (backDrop.classList.contains("back-drop-fade-out")) {

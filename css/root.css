@@ -234,6 +234,13 @@ body {
     }
 }
 
+.main-image-item-fade-out{
+    animation: fade-out .30s forwards;
+}
+
+.main-image-item-fade-in{
+    animation: fade-in .30s forwards;
+}
 
 /*================= start side navigation and back drop ========================*/
 
