@@ -69,12 +69,14 @@
     <div class="content">
         <div class="images-panel">
             <div class="image-scene">
+                <button disabled onclick="onImgBtnNavClick(this,'prev')" class="image-btn-navigation"><i class="fa fa-chevron-left"></i></button>
                 <div class="image-item">
                     <img src="images/image-product-1.jpg" alt="">
                 </div>
                 <div class="image-item">
                     <img src="images/image-product-1.jpg" alt="">
                 </div>
+                <button onclick="onImgBtnNavClick(this,'next')" class="image-btn-navigation"><i class="fa fa-chevron-right"></i></button>
             </div>
             <div class="thumbs">
                 <div class="thumb" onclick="showImage(this)">
