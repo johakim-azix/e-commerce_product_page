@@ -1,10 +1,7 @@
 
 .header-container {
-    /*border: solid green 1px;*/
-    /*position: absolute;*/
     width: 100%;
     height: fit-content;
-
 }
 
 .header {
@@ -58,31 +55,27 @@
 
 .logo button {
     margin: 0 !important;
-    /*border: solid red 1px!important;*/
     padding: 5px;
     display: none;
 }
 
 .navigation {
-    /*border: solid red 1px;*/
     width: calc(100% - 620px);
     align-self: flex-end;
     display: flex;
-    /*margin-bottom: 6px;*/
     height: 60%;
     transition: all ease-in-out .15s;
 }
 
 .navigation .link {
     text-decoration: none;
-    /*background-color: blue;*/
     height: calc(100% - 12px);
     display: inline-block;
-    /*margin: 0 5px;*/
     padding: 9px 15px 0 15px;
     border-bottom: solid transparent 4px;
     color: var(--dark-grayish-blue);
     transition: all ease-in-out .3s;
+    outline: 0;
 }
 
 .navigation .link:hover {
@@ -91,9 +84,6 @@
 }
 
 .cart {
-    /*border: solid black 1px;*/
-    /*background-color: black;*/
-    /*padding-top: 20px ;*/
     position: relative;
     width: 280px;
     display: flex;
@@ -118,7 +108,7 @@
 .logo button:hover,
 .cart > button:hover {
     color: var(--dark-grayish-blue);
-    background-color: rgba(0,0,0,.05);
+    background-color: rgba(0, 0, 0, .05);
 }
 
 .cart-item-counter {
@@ -131,18 +121,17 @@
     right: -7px;
     font-size: 11px;
     opacity: 0;
-    /*animation: fade-in .5s forwards 1s !*, fade-out .5s forwards 4s*!;*/
 }
 
-.cart-item-counter.show{
+.cart-item-counter.show {
     animation: fade-in .5s forwards
 }
 
-.cart-item-counter.hide{
+.cart-item-counter.hide {
     animation: fade-out .5s forwards;
 }
 
-.empty-cart-list-place-holder{
+.empty-cart-list-place-holder {
     min-height: 90px;
     width: 100%;
     display: flex;
@@ -152,7 +141,6 @@
 }
 
 .cart-content {
-    /*display: none;*/
     position: absolute;
     z-index: 1;
     background-color: var(--white);
@@ -175,7 +163,6 @@
 
 .cart-content .title {
     border-bottom: solid rgba(0, 0, 0, .1) 1px;
-    /*height: 40px;*/
     padding: 20px;
     font-weight: bold;
     font-size: 18px;
@@ -198,25 +185,23 @@
 }
 
 .cart-content .body .item-queue .item {
-    /*border: solid red 1px;*/
     padding: 20px;
     display: flex;
     opacity: 0;
 }
 
-.item-fade-in{
-    animation: fade-in .5s forwards ;
+.item-fade-in {
+    animation: fade-in .5s forwards;
 }
 
-.item-fade-out{
-    animation: fade-out .5s forwards ;
+.item-fade-out {
+    animation: fade-out .5s forwards;
 }
 
 .cart-content .body .item-queue .item .image {
     width: 50px;
     height: 50px;
     border-radius: 5px;
-    /*border: solid black 1px;*/
     overflow: hidden;
 }
 
@@ -227,7 +212,6 @@
 
 
 .cart-content .body .item-queue .item .details {
-    /*border: solid red 1px;*/
     width: calc(100% - 90px);
     padding: 0 10px;
     line-height: 25px;
@@ -261,18 +245,18 @@
     opacity: 0;
 }
 
-.btn-fade-in{
+.btn-fade-in {
     cursor: pointer;
-    animation: fade-in .5s forwards ;
+    animation: fade-in .5s forwards;
 }
 
-.btn-fade-out{
-    animation: fade-out .5s forwards ;
+.btn-fade-out {
+    animation: fade-out .5s forwards;
 }
 
 
 .cart-content .body > .btn-fade-in:hover {
-    opacity: .5!important;
+    opacity: .5 !important;
 }
 
 .avatar {
