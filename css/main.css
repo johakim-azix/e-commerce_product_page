@@ -15,7 +15,7 @@
 }
 
 .image-scene {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .05);
     height: 400px;
     width: 400px;
     border-radius: 20px;
@@ -24,6 +24,16 @@
     overflow-y: hidden;
     overflow-x: auto;
     transition: height ease-in-out .30s;
+    animation: skeleton-loading 1s linear alternate-reverse infinite;
+}
+
+@keyframes skeleton-loading {
+    from{
+        background-color: rgba(0, 0, 0, .05);
+    }
+    to{
+        background-color: rgba(0, 0, 0, .150);
+    }
 }
 
 .image-scene .image-item {
@@ -92,7 +102,9 @@
     align-items: center;
     align-content: center;
     position: relative;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .05);
+    animation: skeleton-loading 1s linear alternate-reverse infinite;
+
 }
 
 .thumb .cover {
