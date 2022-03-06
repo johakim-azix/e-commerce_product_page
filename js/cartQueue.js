@@ -19,11 +19,6 @@ class CartQueue {
     getCartItems() {
         return this.cartItems
     }
-
-    refreshCartItemsList() {
-
-    }
-
 }
 
 class CartQueueItemViewHolder {
@@ -55,7 +50,6 @@ class CartQueueItemViewHolder {
         this.viewHolder.setAttribute('id', "cart-item-" + cartItemIndex)
         this.viewHolder.getElementsByTagName("img")[0].setAttribute("src", cartItem.thumb_url)
         this.viewHolder.getElementsByClassName("details")[0].getElementsByClassName("name")[0].innerHTML = cartItem.product_name
-        // alert("dedans : "+this.viewHolder.getElementsByClassName("details")[0].getElementsByClassName("price")[0].className)
         this.viewHolder.getElementsByClassName("details")[0].getElementsByClassName("price")[0].innerHTML = cartItem.currency + cartItem.current_price + " x " + cartItem.number + " <strong>" + cartItem.currency + cartItem.total + "</strong>"
         return this.viewHolder
     }
