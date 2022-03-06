@@ -1,0 +1,204 @@
+.image-shower {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .75);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -2;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /*animation: image-shower-fade-in 1s forwards 2s !*, image-shower-fade-out 1s forwards 5s*!;*/
+}
+
+.image-shower-fade-in{
+    animation: image-shower-fade-in .30s forwards;
+}
+.image-shower-fade-out{
+    animation: image-shower-fade-out .30s forwards;
+}
+
+@keyframes image-shower-fade-in {
+    from {
+        opacity: 0;
+        z-index: -2;
+    }
+
+    to {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+@keyframes image-shower-fade-out {
+    from {
+        opacity: 1;
+        z-index: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -2;
+    }
+}
+
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container > div {
+    height: fit-content;
+    width: 100%;
+    max-width: 500px;
+    /*background-color: white;*/
+    /*margin-right: 0!important; margin-left: 0!important*/
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0
+
+}
+
+.head button {
+    outline: 0;
+    border: 0;
+    color: var(--white);
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.main-image-container > button:hover,
+.head button:hover {
+    color: var(--orange);
+}
+
+.main-image-container {
+    display: flex;
+    position: relative;
+    /*width: fit-content;*/
+}
+
+.main-image-container > button {
+    z-index: 10;
+    outline: 0;
+    border: 0;
+    background-color: var(--white);
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    position: absolute;
+    top: 230px;
+    color: var(--black);
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+}
+
+.main-image-container > button:first-child {
+    left: -20px
+}
+
+.main-image-container > button:last-child {
+    right: -20px;
+}
+
+.image-container {
+    overflow: hidden !important;
+    border-radius: 10px;
+    height: 500px;
+    transition: all ease-in-out .15s;
+    /*border: solid red 1px;*/
+    /*width: 500px!important;*/
+    position: relative;
+    width: 100%;
+}
+
+.image-container .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    /*border: solid black 2px;*/
+    /*height: 500px;*/
+
+}
+
+.container > div > .thumbs {
+    display: flex;
+    opacity: 0;
+    animation: fade-in 1s forwards .2s;
+}
+
+@media screen and (max-width: 715px) {
+
+    .image-container {
+        height: 500px;
+    }
+
+    .main-image-container > button {
+        top: 230px;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .image-container {
+        width: 100%;
+    }
+
+    .main-image-container > button:first-child {
+        left: 0
+    }
+
+    .main-image-container > button:last-child {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    .image-container {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-container {
+        height: 400px !important;
+    }
+
+    .image-scene {
+        height: 400px !important;
+    }
+
+    .main-image-container > button {
+        top: 180px !important;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .image-container {
+        height: 375px !important;
+    }
+
+    .image-scene {
+        height: 375px !important;
+    }
+
+    .main-image-container > button {
+        top: 168px !important;
+    }
+
+    .container > div > .thumbs {
+        display: none;
+    }
+}

@@ -31,6 +31,7 @@
     width: 100% !important;
     position: absolute;
     opacity: 1;
+    cursor: zoom-in;
 }
 
 .image-scene .image-item img {
@@ -62,6 +63,7 @@
     transition: all ease-in-out .15s;
 }
 
+.image-view-btn-navigation:disabled ,
 .image-btn-navigation:disabled {
     cursor: not-allowed;
 }
@@ -272,6 +274,7 @@
         width: 100%;
         border-radius: 0;
     }
+
 
     .thumbs {
         display: none;
