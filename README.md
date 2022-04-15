@@ -45,6 +45,7 @@ Once done with the page template, i moved to the javascript. I ended by testing.
 - Semantic HTML5 markup
 - CSS custom properties, Flexbox, animations, transition
 - Vanilla js
+- Js classes
 
 ### What I learned
 
@@ -53,7 +54,8 @@ I improved the way i structure my code both js and css.
 
 ### Continued development
 
-I'll surely keep learning about better structuring my code and project, and some notions i've learned till now.
+I will surely continue to learn how to better structure my code and my project, and some notions that I have learned so far.
+I'm currently attending openclassrooms courses like Simplify CSS with Sass and Build a Web Application with Vue.js; my next challenge, I will try them.
 
 ## Author
 I am Marlonne and you can find me on these media : 
@@ -61,3 +63,4 @@ I am Marlonne and you can find me on these media :
 - Github  - [johakim-azix](https://github.com/johakim-azix/)
 - Twitter - [@marlonneazix](https://twitter.com/marlonneazix)
 - Instagram - [@marlonne_penda](https://www.instagram.com/marlonne_penda/)
+- LinkedIn - [@joseph penda](https://www.linkedin.com/in/joseph-penda-051a111a7)
